@@ -32,6 +32,7 @@
             label1 = new Label();
             findBtn = new Button();
             treeView1 = new TreeView();
+            drawPanel = new Panel();
             SuspendLayout();
             // 
             // keyValueBox
@@ -63,16 +64,25 @@
             // treeView1
             // 
             treeView1.Dock = DockStyle.Right;
-            treeView1.Location = new Point(492, 0);
+            treeView1.Location = new Point(770, 0);
             treeView1.Name = "treeView1";
-            treeView1.Size = new Size(308, 450);
+            treeView1.Size = new Size(308, 541);
             treeView1.TabIndex = 3;
+            // 
+            // drawPanel
+            // 
+            drawPanel.Dock = DockStyle.Bottom;
+            drawPanel.Location = new Point(0, 166);
+            drawPanel.Name = "drawPanel";
+            drawPanel.Size = new Size(770, 375);
+            drawPanel.TabIndex = 4;
             // 
             // FindNode
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1078, 541);
+            Controls.Add(drawPanel);
             Controls.Add(treeView1);
             Controls.Add(findBtn);
             Controls.Add(label1);
@@ -89,5 +99,6 @@
         private Label label1;
         private Button findBtn;
         private TreeView treeView1;
+        private Panel drawPanel;
     }
 }

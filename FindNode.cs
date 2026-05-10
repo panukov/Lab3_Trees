@@ -18,9 +18,51 @@ namespace Lab3_Trees
             _tree = tree;
             _list = list;
 
-            treeView1.Nodes.Clear();
-            _tree.FillTreeView(treeView1.Nodes, _tree.Root);
-            treeView1.ExpandAll();
+            if (_tree != null && _tree.Root != null)
+            {
+                treeView1.Nodes.Clear();
+                _tree.FillTreeView(treeView1.Nodes, _tree.Root);
+                treeView1.ExpandAll();
+            }
+        }
+
+        private void DisplayTreeVisual(DTreeNode node)
+        {
+            drawPanel.Controls.Clear();
+
+            if (node != null)
+            {
+                int panelWidth = drawPanel.Width;
+                int startX = panelWidth / 2;
+                int startY = 20;
+                int offsetX = 150;
+                int offsetY = 50;
+
+                AddNodeToPanel(node, startX, startY, offsetX, offsetY);
+            }
+        }
+
+        private void AddNodeToPanel(DTreeNode node, int x, int y, int offsetX, int offsetY)
+        {
+            if (node != null)
+            {
+                Label lbl = new Label();
+                lbl.Text = $"{node.Key}({node.Info})";
+                lbl.AutoSize = true;
+                lbl.Location = new Point(x - lbl.Width / 2, y);
+
+                drawPanel.Controls.Add(lbl);
+
+                if (node.Left != null)
+                {
+                    AddNodeToPanel(node.Left, x - offsetX, y + offsetY, offsetX / 2, offsetY);
+                }
+
+                if (node.Right != null)
+                {
+                    AddNodeToPanel(node.Right, x + offsetX, y + offsetY, offsetX / 2, offsetY);
+                }
+            }
         }
 
         private void findBtn_Click(object sender, EventArgs e)
@@ -44,6 +86,8 @@ namespace Lab3_Trees
                     treeView1.Nodes.Clear();
                     _tree.FillTreeView(treeView1.Nodes, node);
                     treeView1.ExpandAll();
+
+                    DisplayTreeVisual(node);
 
                 }
             }

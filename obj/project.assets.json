@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nikolay\\source\\repos\\Lab3_Trees\\Lab3_Trees.csproj",
+      "projectUniqueName": "C:\\Users\\Nikolay\\Desktop\\лабы важное\\2 сем\\3 лаба\\Lab3_Trees\\Lab3_Trees.csproj",
       "projectName": "Lab3_Trees",
-      "projectPath": "C:\\Users\\Nikolay\\source\\repos\\Lab3_Trees\\Lab3_Trees.csproj",
+      "projectPath": "C:\\Users\\Nikolay\\Desktop\\лабы важное\\2 сем\\3 лаба\\Lab3_Trees\\Lab3_Trees.csproj",
       "packagesPath": "C:\\Users\\Nikolay\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nikolay\\source\\repos\\Lab3_Trees\\obj\\",
+      "outputPath": "C:\\Users\\Nikolay\\Desktop\\лабы важное\\2 сем\\3 лаба\\Lab3_Trees\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

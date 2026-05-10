@@ -78,7 +78,7 @@ namespace Lab3_Trees
             return finded;
         }
 
-        public void LKP(DTreeNode node, CycleDoubleLinkList list) 
+        public void LKP(DTreeNode node, CycleDoubleLinkList list)
         {
             if (node != null)
             {

@@ -18,3 +18,24 @@ C:\Users\Nikolay\source\repos\Lab3_Trees\obj\Debug\net10.0-windows\ref\Lab3_Tree
 C:\Users\Nikolay\source\repos\Lab3_Trees\obj\Debug\net10.0-windows\Lab3_Trees.CreateTree.resources
 C:\Users\Nikolay\source\repos\Lab3_Trees\obj\Debug\net10.0-windows\Lab3_Trees.DestroyTree.resources
 C:\Users\Nikolay\source\repos\Lab3_Trees\obj\Debug\net10.0-windows\Lab3_Trees.FindNode.resources
+C:\Users\Nikolay\Desktop\лабы важное\2 сем\3 лаба\Lab3_Trees\bin\Debug\net10.0-windows\Lab3_Trees.exe
+C:\Users\Nikolay\Desktop\лабы важное\2 сем\3 лаба\Lab3_Trees\bin\Debug\net10.0-windows\Lab3_Trees.deps.json
+C:\Users\Nikolay\Desktop\лабы важное\2 сем\3 лаба\Lab3_Trees\bin\Debug\net10.0-windows\Lab3_Trees.runtimeconfig.json
+C:\Users\Nikolay\Desktop\лабы важное\2 сем\3 лаба\Lab3_Trees\bin\Debug\net10.0-windows\Lab3_Trees.dll
+C:\Users\Nikolay\Desktop\лабы важное\2 сем\3 лаба\Lab3_Trees\bin\Debug\net10.0-windows\Lab3_Trees.pdb
+C:\Users\Nikolay\Desktop\лабы важное\2 сем\3 лаба\Lab3_Trees\obj\Debug\net10.0-windows\Lab3_Trees.AboutProgram.resources
+C:\Users\Nikolay\Desktop\лабы важное\2 сем\3 лаба\Lab3_Trees\obj\Debug\net10.0-windows\Lab3_Trees.CreateTree.resources
+C:\Users\Nikolay\Desktop\лабы важное\2 сем\3 лаба\Lab3_Trees\obj\Debug\net10.0-windows\Lab3_Trees.DestroyTree.resources
+C:\Users\Nikolay\Desktop\лабы важное\2 сем\3 лаба\Lab3_Trees\obj\Debug\net10.0-windows\Lab3_Trees.FindNode.resources
+C:\Users\Nikolay\Desktop\лабы важное\2 сем\3 лаба\Lab3_Trees\obj\Debug\net10.0-windows\Lab3_Trees.Form1.resources
+C:\Users\Nikolay\Desktop\лабы важное\2 сем\3 лаба\Lab3_Trees\obj\Debug\net10.0-windows\Lab3_Trees.csproj.GenerateResource.cache
+C:\Users\Nikolay\Desktop\лабы важное\2 сем\3 лаба\Lab3_Trees\obj\Debug\net10.0-windows\Lab3_Trees.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nikolay\Desktop\лабы важное\2 сем\3 лаба\Lab3_Trees\obj\Debug\net10.0-windows\Lab3_Trees.AssemblyInfoInputs.cache
+C:\Users\Nikolay\Desktop\лабы важное\2 сем\3 лаба\Lab3_Trees\obj\Debug\net10.0-windows\Lab3_Trees.AssemblyInfo.cs
+C:\Users\Nikolay\Desktop\лабы важное\2 сем\3 лаба\Lab3_Trees\obj\Debug\net10.0-windows\Lab3_Trees.csproj.CoreCompileInputs.cache
+C:\Users\Nikolay\Desktop\лабы важное\2 сем\3 лаба\Lab3_Trees\obj\Debug\net10.0-windows\Lab3_Trees.sourcelink.json
+C:\Users\Nikolay\Desktop\лабы важное\2 сем\3 лаба\Lab3_Trees\obj\Debug\net10.0-windows\Lab3_Trees.dll
+C:\Users\Nikolay\Desktop\лабы важное\2 сем\3 лаба\Lab3_Trees\obj\Debug\net10.0-windows\refint\Lab3_Trees.dll
+C:\Users\Nikolay\Desktop\лабы важное\2 сем\3 лаба\Lab3_Trees\obj\Debug\net10.0-windows\Lab3_Trees.pdb
+C:\Users\Nikolay\Desktop\лабы важное\2 сем\3 лаба\Lab3_Trees\obj\Debug\net10.0-windows\Lab3_Trees.genruntimeconfig.cache
+C:\Users\Nikolay\Desktop\лабы важное\2 сем\3 лаба\Lab3_Trees\obj\Debug\net10.0-windows\ref\Lab3_Trees.dll
