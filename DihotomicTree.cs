@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using TreeView = System.Windows.Forms.TreeView;
 
 namespace Lab3_Trees
 {
@@ -44,20 +46,57 @@ namespace Lab3_Trees
             root = null;
         }
 
-
-        public DTreeNode Insert(DTreeNode node, char info, int key)
+        private void AddNodeToPanel(Panel panel, DTreeNode node, int x, int y, int dX, int dY)
         {
-            if (node == null)
+            if (node != null)
             {
-                node = new DTreeNode(info, key);
+                Label lbl = new Label();
+                lbl.Text = $"{node.Key}({node.Info})";
+                lbl.AutoSize = true;
+                lbl.Location = new Point(x - lbl.Width / 2, y);
+                panel.Controls.Add(lbl);
+
+                if (node.Left != null)
+                {
+                    AddNodeToPanel(panel, node.Left, x - dX, y + dY, dX / 2, dY);
+                }
+
+                if (node.Right != null)
+                {
+                    AddNodeToPanel(panel, node.Right, x + dX, y + dY, dX / 2, dY);
+                }
+            }
+        }
+
+        public void DisplayTreeVisual(Panel panel, DTreeNode node)
+        {
+            if (node != null)
+            {
+                panel.Controls.Clear();
+
+                int panelWidth = panel.Width;
+                int startX = panelWidth / 2;
+                int startY = 20;
+                int dX = 150;
+                int dY = 50;
+
+                AddNodeToPanel(panel, node, startX, startY, dX, dY);
+            }
+        }
+
+        public DTreeNode Insert(DTreeNode treeNode, char info, int key)
+        {
+            if (treeNode == null)
+            {
+                treeNode = new DTreeNode(info, key);
             }
             else
             {
-                if (key < node.Key) node.Left = Insert(node.Left, info, key);
+                if (key < treeNode.Key) treeNode.Left = Insert(treeNode.Left, info, key);
 
-                else if (key > node.Key) node.Right = Insert(node.Right, info, key);
+                else if (key > treeNode.Key) treeNode.Right = Insert(treeNode.Right, info, key);
             }
-            return node;
+            return treeNode;
         }
 
         public DTreeNode Find(DTreeNode root, int key)
@@ -78,15 +117,15 @@ namespace Lab3_Trees
             return finded;
         }
 
-        public void LKP(DTreeNode node, CycleDoubleLinkList list)
+        public void LKP(DTreeNode treeNode, CycleDoubleLinkList list)
         {
-            if (node != null)
+            if (treeNode != null)
             {
-                LKP(node.Left, list);
+                LKP(treeNode.Left, list);
 
-                list.AddNode(node.Info, node.Key);
+                list.AddNode(treeNode.Info, treeNode.Key);
 
-                LKP(node.Right, list);
+                LKP(treeNode.Right, list);
             }
         }
 
@@ -95,16 +134,35 @@ namespace Lab3_Trees
             root = null;
         }
 
-        public void FillTreeView(TreeNodeCollection nodes, DTreeNode node)
+        public void FillTreeView(TreeNodeCollection nodes, DTreeNode treeNode)
         {
-            if (node != null)
+            if (treeNode != null)
             {
-                TreeNode treeNode = new TreeNode($"({node.Key}) {node.Info}");
-                nodes.Add(treeNode);
+                TreeNode treeViewNode = new TreeNode($"({treeNode.Key}) {treeNode.Info}");
+                nodes.Add(treeViewNode);
 
-                FillTreeView(treeNode.Nodes, node.Left);
-                FillTreeView(treeNode.Nodes, node.Right);
+                FillTreeView(treeViewNode.Nodes, treeNode.Left);
+                FillTreeView(treeViewNode.Nodes, treeNode.Right);
             }
+        }
+
+        public DTreeNode FillList(int key, CycleDoubleLinkList list, TreeView treeView)
+        {
+            DTreeNode treeNode = Find(Root, key);
+
+            if (treeNode == null)
+            {
+                MessageBox.Show("Узел не найден");
+            }
+            else
+            {
+                LKP(treeNode, list);
+                treeView.Nodes.Clear();
+                FillTreeView(treeView.Nodes, treeNode);
+                treeView.ExpandAll();
+            }
+
+            return treeNode;
         }
     }
 }

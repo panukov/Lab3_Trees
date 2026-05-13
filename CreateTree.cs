@@ -55,30 +55,45 @@ namespace Lab3_Trees
 
             foreach (DataGridViewRow row in nodesData.Rows)
             {
-                if (!row.IsNewRow && isValid)
+                if (isValid)
                 {
                     rowIndex++;
 
-                    if (!int.TryParse(row.Cells["nodesKey"].Value?.ToString(), out keyValue))
+                    if (row.Cells["nodesKey"].Value == null)
+                    {
+                        isValid = false;
+                        errorMsg = $"Ошибка: пустая строка {rowIndex}";
+                    }
+
+                    else if (!int.TryParse(row.Cells["nodesKey"].Value.ToString(), out keyValue))
                     {
                         isValid = false;
                         errorMsg = $"Ошибка: ключ в строке {rowIndex}";
                     }
 
-                    if (isValid && keys.Contains($"|{keyValue}|"))
+                    else if (isValid && keys.Contains($"|{keyValue}|"))
                     {
                         isValid = false;
                         errorMsg = $"Ошибка: ключ {keyValue} не уникален";
                     }
-                    keys += $"|{keyValue}|";
+
+                    else keys += $"|{keyValue}|";
 
                     if (isValid)
                     {
-                        string info = row.Cells["nodesInfo"].Value?.ToString();
-                        if (string.IsNullOrEmpty(info) || info.Length != 1)
+                        if (row.Cells["nodesInfo"].Value == null)
                         {
                             isValid = false;
-                            errorMsg = $"Ошибка: инфо поле в строке {rowIndex} (нужен 1 символ)";
+                            errorMsg = $"Ошибка: пустое инфо поле в строке {rowIndex}";
+                        }
+                        else
+                        {
+                            string info = row.Cells["nodesInfo"].Value.ToString();
+                            if (info.Length != 1)
+                            {
+                                isValid = false;
+                                errorMsg = $"Ошибка: инфо поле в строке {rowIndex} (нужен 1 символ)";
+                            }
                         }
                     }
                 }

@@ -25,7 +25,8 @@ namespace Lab3_Trees
               MessageBoxButtons.YesNo,
               MessageBoxIcon.Warning);
 
-            if (result == DialogResult.Yes) _tree.Destroy(); ;
+            if (result == DialogResult.Yes && _tree != null) _tree.Destroy();
+            else { MessageBox.Show("Дерево не создано!"); }
         }
     }
 }

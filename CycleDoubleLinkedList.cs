@@ -82,6 +82,21 @@ namespace Lab3_Trees
             return result;
         }
 
+        public void DisplayInDataGridView(DataGridView grid)
+        {
+            grid.Rows.Clear();
+
+            int index = 1;
+            DoubleNode p = head.Next;
+
+            while (p != head)
+            {
+                grid.Rows.Add(index.ToString(), p.Key.ToString(), p.Info.ToString());
+                index++;
+                p = p.Next;
+            }
+        }
+
         public void Clear()
         {
             head.Next = head;
